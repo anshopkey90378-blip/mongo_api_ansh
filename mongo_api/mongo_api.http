@@ -1,0 +1,42 @@
+@mongo_api_HostAddress = https://localhost:7141
+
+### Get all Users
+
+GET https://localhost:7141/api/users
+
+### Search by Email
+GET https://localhost:7141/api/users/by-email?email=rohan123@gmail.com
+
+### Search  by name
+GET https://localhost:7141/api/users/by-name?name=Tom
+
+### Sortedb by 
+GET https://localhost:7141/api/users/by-sortedby?sortedby=age
+
+### Insert a user
+POST https://localhost:7141/api/users
+Content-Type: application/json
+
+{
+  "name": "Tom Shallby",
+  "email": "Tomasb@gmail.com",
+  "age": 36,
+  "Hobbies": ["Swimming", "Weight Lifting"]
+}
+
+### Detelet a User by email
+DELETE https://localhost:7141/api/users/by-email?email=rohan123@gmail.com
+
+### Detelet a User by name
+DELETE https://localhost:7141/api/users/by-name?name=Tom
+
+### Update Name and Age (by email)
+
+PUT https://localhost:7141/api/users/Tomasb@gmail.com
+Content-Type: application/json
+
+{
+  "name": "Tom Shallby",
+  "email": "Tomasb@gmail.com",
+  "age": 37
+}
